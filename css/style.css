@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    font-family: Verdana, sans-serif;
+}
+.show{
+    display: initial;
+}
+.hide{
+    display: none;
+}
+.title{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+}
+#enter-ip__screen{
+    display: flex;
+    flex-direction: column;
+}
+#enter-ip__screen, #ip-informations__screen{
+    padding: 2em;
+    border: 2px solid rgb(221, 220, 220);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(223, 220, 220);
+}
+#find-my-ip__button{
+    height: 100%;
+}
+#ip-inputs{
+    display: inline-flex;
+    padding-bottom: 1em;
+}
+#ip-inputs div{
+    margin-left: 2vw;
+}
+.go-input{
+    text-align: center;
+}
+input{
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-bottom: 2px rgb(0, 187, 255) solid;
+    padding: .5em;
+    transition: ease-in-out .1s;
+}
+input:focus{
+    border-bottom: 4px rgb(0, 122, 167) solid;
+}
+button{
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    transition: ease-in-out .1s;
+}
+button:hover{
+    filter: saturate(1.4);
+}
+#go-button, #return{
+    background-color: rgb(4, 181, 40);
+    padding: .5em;
+    font-weight: bold;
+}
+#find-my-ip__button{
+    padding: 2%;
+    background-color: rgb(2, 154, 241);
+}
+#find-my-ip__button::after{
+    content: url(../img/crossfire.svg);
+    height: 100%;
+}
+#ip-informations__screen{
+    padding: .5em;
+    width: 85vw;
+    height: min-content;
+    text-align: center;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+#map, #info, #return-box{
+    width: 98%;
+}
+#map{
+    border: 3px solid rgb(245, 245, 245);
+    border-radius: 5px;
+    max-height: 30%;
+    text-align: center;
+    overflow: hidden;
+}
+#map iframe{
+    width: 100%;
+}
+#map:empty{
+    border: 3px solid rgb(236, 236, 236);
+    background-color: rgb(236, 236, 236);
+}
+#map:empty::before{
+    content: 'carregando mapa';
+    color: rgb(95, 95, 95);
+}
+#info-box{
+    width: max-content;
+    text-align: left;
+    padding: 1.2em;
+    height: 50%;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1em;
+}
+.ip-information{
+    padding: .7vh;
+    display: flex;
+    flex-direction: row;
+}
+#return-box{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.label{
+    text-align: left;
+    width: 50%;
+}
+.value{
+    font-size: 1em;
+    width: 50%;
+}
+#return{
+    margin: 2vh;
+}
+@media (orientation: landscape){
+    #ip-informations__screen{
+        width: 60vw;
+    }
+    #map-and-ip-infos{
+        flex-direction: row;
+    }
+    #map{
+        max-height: 20%;
+    }
+}
