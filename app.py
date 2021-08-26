@@ -9,7 +9,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def index():
-    return 'Locate by IP API<br>view the documentation <a href="#">here</a>  '
+    return 'Locate by IP API<br><a href="https://github.com/WayneRocha/ip-geolocation/edit/">more...</a>  '
 
 
 @app.route('/geolocation', methods=['GET'])
